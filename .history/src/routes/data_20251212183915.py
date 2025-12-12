@@ -67,7 +67,7 @@ async def process_endpoint (project_id:str, process_request:ProcessRequest):
     chunk_size = process_request.chunk_size
     overlap_size = process_request.overlap_size
 
-    process_controller = ProcessController(project_id= project_id)
+    process_controller = processController(project_id= project_id)
 
     file_content = process_controller.get_file_content(file_id=file_id)
 
@@ -86,4 +86,4 @@ async def process_endpoint (project_id:str, process_request:ProcessRequest):
             }
         )
 
-    return file_chunks
+    return file_id
